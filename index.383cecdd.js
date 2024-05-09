@@ -1,0 +1,2 @@
+const e=[{label:"HTML"},{label:"CSS"},{label:"JAVASCRIPT"},{label:"Node.js"},{label:"React"},{label:"MongooDB"},{label:"Redux"},{label:"Next.js"},{label:"Vue.js"}],l={list:document.querySelector(".list-js"),input:document.querySelector("#filter")};l.input.addEventListener("input",_.debounce((function(l){const o=l.target.value.toLowerCase(),a=e.filter((e=>e.label.toLowerCase().includes(o)));console.log(a);n(t(a))}),300));function t(e){return e.map((e=>`<li>${e.label}</li>`)).join("")}function n(e){l.list.innerHTML=e}n(t(e));
+//# sourceMappingURL=index.383cecdd.js.map

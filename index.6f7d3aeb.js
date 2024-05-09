@@ -1,0 +1,2 @@
+const t=document.querySelector(".input-search"),e=document.querySelector(".text-output");t.addEventListener("input",_.throttle((function(t){e.textContent=`Значення :${t.target.value}`}),500)),console.log(_.throttle);const n=document.querySelector(".container-input-rigth");n.addEventListener("input",_.debounce((function(t){t.target.value.trim().length<=7?(t.target.classList.remove("invalid"),t.target.classList.add("valid")):(t.target.classList.remove("valid"),t.target.classList.add("invalid"))}),500));
+//# sourceMappingURL=index.6f7d3aeb.js.map

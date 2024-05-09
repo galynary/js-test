@@ -1,0 +1,2 @@
+const c=[{id:"cat1",count:"2"},{id:"cat2",count:"5"},{id:"cat3",count:"3"},{id:"cat3",count:"6"},{id:"cat3",count:"1"},{id:"cat4",count:"8"},{id:"cat4",count:"3"},{id:"cat5",count:"9"},{id:"cat6",count:"12"}];!function(c){for(let t=0;t<c.length;t+=1){console.log("поточний",c[t]);for(let o=t+1;o<c.length;o+=1)console.log("наступний",c[o]),c[t].id===c[o].id&&(c[t].count+=c[o].count,c.splice(o,1),o-=1)}}(c),console.log(c);
+//# sourceMappingURL=index.eb9eb929.js.map

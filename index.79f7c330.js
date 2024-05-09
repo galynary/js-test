@@ -1,0 +1,2 @@
+!function(){var c=[{id:"cat1",count:"2"},{id:"cat2",count:"5"},{id:"cat3",count:"3"},{id:"cat3",count:"6"},{id:"cat3",count:"1"},{id:"cat4",count:"8"},{id:"cat4",count:"3"},{id:"cat5",count:"9"},{id:"cat6",count:"12"}];!function(c){for(var o=0;o<c.length;o+=1){console.log("поточний",c[o]);for(var t=o+1;t<c.length;t+=1)console.log("наступний",c[t]),c[o].id===c[t].id&&(c[o].count+=c[t].count,c.splice(t,1),t-=1)}}(c),console.log(c)}();
+//# sourceMappingURL=index.79f7c330.js.map
