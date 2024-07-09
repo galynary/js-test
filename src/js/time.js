@@ -6,25 +6,31 @@ const dataTime={
     time:"",
     endTime:""
 }
-const timer =JSON.parse(localStorage.getItem('dataTime'))
+const timer =JSON.parse(localStorage.getItem(dataTime))
 time.addEventListener("input", ()=> {
     dataTime.time= time.value
     localStorage.setItem('timer', JSON.stringify(dataTime))})
 
-strBtn.addEventListener("input", (event)=> {
-event.target.value
-const now = new Date().getTime();
-const end = new Date(dataTime.time).getTime();
-const distance = end - now;
-localStorage.setItem('timer', JSON.stringify(dataTime));
-if (distance > 0) {
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+strBtn.addEventListener("click", ()=> {
+  dataTime.endTime= endTime.value
+  setInterval(function() {
+    const time = document.querySelector(".input__time").value
+    let now = new Date().getTime();
+    let selectedTime = new Date(time).getTime();
+    let distance = selectedTime - now;
+    localStorage.setItem('timer', JSON.stringify(distance));
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const timeLeft = `${days}д ${hours}г ${minutes}хв ${seconds}сек`;
+    endTime.textContent = timeLeft;
+    
+}, 1000);
+})
 
-  const timeLeft = `${days}д ${hours}г ${minutes}хв ${seconds}сек`;
-  endTime.textContent = timeLeft;
-  dataTime.endTime = timeLeft;
+    
+  
+    
  
-}})
+  
